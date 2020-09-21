@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login/login.dart';
+import 'package:flutter_login/main.dart';
 
 
 class Register extends StatefulWidget {
@@ -131,19 +132,34 @@ class _RegisterState extends State<Register> {
 
                 GestureDetector(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Login()),);
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>MyApp()));
                   },
                   child: Container(
-                    height: 30.0,
-                    width: 100.0,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      color: Colors.blueAccent,
-                    ),
-                    child:
-                    Center(child: Text("BACK")),
+                      height: 30.0,
+                      width: 100.0,
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(colors: [Colors.redAccent,Colors.green]),
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      child: Center(child: Text("BACK"))
                   ),
-                ),
+                )
+
+                // GestureDetector(
+                //   onTap: (){
+                //     Navigator.push(context, MaterialPageRoute(builder: (context)=>Login()),);
+                //   },
+                //   child: Container(
+                //     height: 30.0,
+                //     width: 100.0,
+                //     decoration: BoxDecoration(
+                //       borderRadius: BorderRadius.circular(10.0),
+                //       color: Colors.blueAccent,
+                //     ),
+                //     child:
+                //     Center(child: Text("BACK")),
+                //   ),
+                // ),
 
               ],
             ),

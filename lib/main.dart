@@ -11,12 +11,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Center(child: Text("Login Page")),
-        ),
-        body: Login(),
-      ),
+          home:Scaffold(
+            appBar: AppBar(
+              elevation: 0,
+              backgroundColor: Colors.redAccent,
+              title: Center(child: Text("Login Page")),
+              leading: Icon(Icons.menu),
+              actions: [
+                IconButton(icon: Icon(Icons.search), onPressed: (){})
+              ],
+            ),
+            body: Login(),
+          ),
     );
   }
 }
+
